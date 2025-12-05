@@ -1,3 +1,6 @@
+> 🚧 **Work in Progress**  
+This project is currently being updated and may be missing key features.
+
 # Telco Customer Churn Analysis
 ## Project Overview
 
