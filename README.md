@@ -1,4 +1,7 @@
 # Telco Customer Churn Analysis
+
+For a high-level overview of the project and key findings, see [EXECUTIVE_SUMMARY.md](./EXECUTIVE_SUMMARY.md)
+
 ## Project Overview
 
 This project explores customer churn for a telecommunications company (Telco) using demographic, account, and service usage data. The goal is to identify key factors influencing churn and provide actionable insights to improve customer retention.
@@ -23,63 +26,36 @@ The Telco dataset contains information on customer demographics, subscription se
 
 The dataset used in this project is the **Telco Customer Churn Dataset**, originally published by IBM and available on [Kaggle](https://www.kaggle.com/blastchar/telco-customer-churn). It contains customer demographics, account information, and service usage details for a telecommunications company. The target variable is `Churn`, which indicates whether a customer has discontinued the service.
 
-### Dataset Organization
+## Analysis Approach
 
-- `data/raw/`: Original dataset (`WA_Fn-UseC_-Telco-Customer-Churn.csv`) downloaded from Kaggle.  
-- `data/processed/`: Cleaned and preprocessed datasets:
-  - `readable_telco_churn_data.csv` — cleaned and human-readable.
-  - `encoded_telco_churn_data.csv` — encoded for modeling purposes.
+- Exploratory Data Analysis (EDA) to uncover patterns across demographics, services, contracts, and spending.
+- Predictive modeling using logistic regression and tree-based models to identify high-risk customers.
+- Threshold optimization to improve retention campaign efficiency.
 
-> **Note:** The raw dataset is included to ensure reproducibility. All transformations and preprocessing steps are documented in the Jupyter notebooks.
+## Key Insights
 
+- Short-tenure and month-to-month contract customers are most at risk.
+- Billing preferences and high monthly charges influence churn risk.
+- Engagement through multi-service usage and support services correlates with higher retention.
 
-## Analysis & Approach
+## Business Impact
 
-The project follows an exploratory data analysis (EDA) approach to uncover patterns and correlations related to churn:
+Implementing targeted retention strategies could reduce churn by 5–10% in high-risk segments and increase customer lifetime value. Detailed recommendations are provided in the [Executive Summary](EXECUTIVE_SUMMARY.md) and Notebook 05.
 
-1. Data cleaning and preprocessing
-
-2. Feature exploration across demographics, services, contracts, and spending
-
-3. Identification of churn drivers through correlation analysis and visualizations
-
-4. Synthesis of actionable business insights
-
-## Key Findings
-
-- Month-to-month contracts, short tenure (<24 months), and paperless billing are strongly associated with higher churn.
-
-- Higher monthly charges increase churn risk, particularly for new customers.
-
-- Multi-service customers tend to be more loyal, though streaming services show a slight positive correlation with churn.
-
-- Tech support and online security services are associated with higher retention.
-
-## Business Impact & Recommendations
-
-- Target high-risk segments with loyalty programs or contract incentives.
-
-- Focus retention efforts on first-year customers with onboarding and proactive engagement.
-
-- Enhance internet and tech support experiences, especially for Fiber customers.
-
-- Optimize pricing transparency and flexible service bundles to reduce perceived cost concerns.
-
-- Future opportunity: implement predictive models to proactively flag at-risk customers.
-
-**Expected outcome:** A potential 5–10% reduction in churn among high-risk segments, improved customer lifetime value, and increased overall satisfaction.
 
 ## How to Run
 
 This project is organized into four Jupyter notebooks that cover the full analysis pipeline:
 
-- **01_dataset_overview.ipynb** – Overview of the raw dataset
+- **01_dataset_overview.ipynb** - Overview of the raw dataset
 
-- **02_data_preparation.ipynb** – Cleaning and preprocessing
+- **02_data_preparation.ipynb** - Cleaning and preprocessing
 
-- **03_exploratory_data_analysis.ipynb** – Visual exploration and churn patterns
+- **03_exploratory_data_analysis.ipynb** - Visual exploration and churn patterns
 
-- **04_insights_and_recommendations.ipynb** – Final insights and conclusions
+- **04_modeling.ipynb** - Modeling and 
+
+- **05_insights_and_recommendations.ipynb** - Final insights and conclusions
 
 Follow the steps below to set up the environment and run the notebooks.
 
@@ -115,8 +91,6 @@ Follow the steps below to set up the environment and run the notebooks.
     > The notebook will download the required datasets automatically when run. 
 
 ## Future Work
-
-- Build a predictive churn model using logistic regression, random forest, or gradient boosting.
 
 - Test retention interventions and simulate potential impact on revenue.
 
