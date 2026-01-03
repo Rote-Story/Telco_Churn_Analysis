@@ -87,7 +87,7 @@ Follow the steps below to set up the environment and run the notebooks.
     ```
     jupyter notebook
     ```
-    Open any notebook in the sequence (`01_...` through `04_...`) in your browser.
+    Open any notebook in the sequence (`01_...` through `05_...`) in your browser.
     > The notebook will download the required datasets automatically when run. 
 
 ## Future Work
